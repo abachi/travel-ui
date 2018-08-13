@@ -1,0 +1,18 @@
+body{ font-family: "Roboto" }
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none;}
+.sub-menu button:hover{border-radius: 1rem;background-color: #49bcf7;}
+.header .menu li a:hover{ color:  #262d57;}
+.search-flights .menu li:hover{ background-color: #526199; }
+.tag:hover{ opacity: .75; }
+.content .offers ul li p a:hover{background-color: #49bcf7;}
+/* utilities */
+.text-vertical-rl-180{writing-mode: vertical-rl;transform: rotate(180deg);}
+.text-blue-night{color: #262d57;}
+.bg-blue-night{background-color: #405089;}
+.bg-blue-day{background-color: #49bcf7;}
+.rounded-b-xl{border-bottom-right-radius: 2rem;border-bottom-left-radius: 2rem}
+.rounded-xl{border-radius: 1rem;}
+.bg-white-transparent{background-color: #526199;}
+.bg-red-soft{background-color: #ff7555;}
