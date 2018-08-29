@@ -1,124 +1,138 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Travel UI</title>
-	<link rel="stylesheet" type="text/css" href="src/css/tailwindcss.min.css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="src/css/style.css">
 	<link rel="stylesheet" type="text/css" href="src/css/fontawesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="src/css/main.css">
+	<title>Travel UI</title>
 </head>
 <body>
-	<div class="flex h-screen">
-		<div class="sidebar px-16 text-blue-night">
-			<div class="logo flex-row items-center my-16">
-				<i class="far fa-compass fa-lg text-grey"></i>
-				<h1 class="text-lg text-vertical-rl-180 my-2">Travel.</h1>
-			</div>
-			<div class="social-media leading-normal">
-				<ul class="flex-row text-xs font-semibold pt-8">
-					<li class="text-vertical-rl-180 my-8">
-						<a href="#" class="text-blue-night">Facebook</a>
-					</li>
-					<li class="text-vertical-rl-180 my-8">
-						<a href="#" class="text-blue-night">Instagram</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="w-1/3">
-			<div class="search-flights rounded-b-xl bg-blue-night text-white pb-1 shadow-lg">
-				<ul class="menu flex mb-12">
-					<li class="w-1/3 flex items-center text-center bg-gery-lightest hover:opacity-50">
-						<a href="#" class="w-full text-white py-12 text-xs font-bold">
-							<i class="fas fa-plane fa-lg mx-2"></i> Flight
-						</a>
-					</li>
-					<li class="w-1/3 flex items-center text-center bg-gery-lightest hover:opacity-50">
-						<a href="#" class="w-full text-grey py-12 text-xs font-bold hover:text-white">
-							<i class="fas fa-home fa-lg mx-2"></i> Hotel
-						</a>
-					</li>
-					<li class="w-1/3 flex items-center text-center bg-gery-lightest hover:opacity-50">
-						<a href="#" class="w-full text-grey py-12 text-xs font-bold hover:text-white">
-							<i class="fas fa-car fa-lg mx-2"></i> Rental car
-						</a>
-					</li>
-				</ul>
-				<div class="sub-menu flex justify-center text-center">
-					<button class="active rounded-xl text-white font-semibold text-xs bg-blue-day px-3 py-2 mx-3">Roundtrip</button>
-					<button class="rounded-xl text-grey font-semibold text-xs px-3 py-2 mx-3 hover:text-white">One way</button>
-					<button class="rounded-xl text-grey font-semibold text-xs px-3 py-2 mx-3 hover:text-white">Multi-city</button>
+	<div class="flex-row lg:flex h-screen">
+		<div class="flex w-full">
+			<div class="sidebar xs:w-1/4 flex-row px-4 text-blue-night">
+				<div class="logo flex-row text-center justify-center items-center my-24">
+					<span class="text-vertical-rl-180">
+						<h1 class="inline-block text-lg">Travel.</h1>
+						<i class="far fa-compass fa-lg text-grey"></i>
+					</span>
 				</div>
-				<form class="w-3/4 mx-auto flex-row text-white my-8">
-					<div class="flex items-center border-b border-grey-darker pb-1 my-6">
-						<i class="fas fa-map-marker-alt text-grey"></i>
-						<input class="bg-blue-night border-none pl-3 py-2 text-white text-xs font-semibold" 
-						type="text" name="from" placeholder="From">
-					</div>
-					<div class="flex items-center border-b border-grey-darker pb-1 my-6">
-						<i class="fas fa-map-marker-alt text-grey"></i>
-						<input class="bg-blue-night border-none pl-3 py-2 text-white text-xs font-semibold" 
-						type="text" name="to" placeholder="To">
-					</div>
-					<ul class="tags flex">
-						<li class="tag"><a href="#"class="mx-1 px-4 py-3 rounded-xl text-white text-xs font-semibold bg-white-transparent">Munich</a></li>
-						<li class="tag"><a href="#"class="mx-1 px-4 py-3 rounded-xl text-white text-xs font-semibold bg-white-transparent">Amsterdam</a></li>
+				<div class="social-media flex justify-center leading-normal">
+					<ul class="flex text-xs font-semibold text-vertical-rl-180">
+						<li class="my-8">
+							<a href="#" class="text-blue-night">Facebook</a>
+						</li>
+						<li class="my-8">
+							<a href="#" class="text-blue-night">Instagram</a>
+						</li>
 					</ul>
-					<div class="w-full my-4 flex items-center">
-						<div class="w-1/2 mr-4">
-							<div class="flex items-center border-b border-grey-darker pb-1 my-6">
-								<i class="far fa-calendar-alt text-grey"></i>
-								<input class="w-4/5 bg-blue-night border-none pl-3 py-2 text-white text-xs font-semibold" 
-								type="text" name="departing" placeholder="Departing">
-							</div>
-							<div class="flex items-center border-b border-grey-darker pb-1 my-6">
-								<i class="fas fa-users text-grey"></i>
-								<input class="w-4/5 bg-blue-night border-none pl-3 py-2 text-white text-xs font-semibold" 
-								type="text" name="adults" placeholder="Adults">
-							</div>
-						</div>
-						<div class="w-1/2">
-							<div class="flex items-center border-b border-grey-darker pb-1 my-6">
-								<i class="far fa-calendar-alt text-grey"></i>
-								<input class="w-4/5 bg-blue-night border-none pl-3 py-2 text-white text-xs font-semibold" 
-								type="text" name="returning" placeholder="Returnings">
-							</div>
-							<div class="flex items-center border-b border-grey-darker pb-1 my-6">
-								<i class="fas fa-plus text-grey"></i>
-								<input class="w-4/5 bg-blue-night border-none pl-3 py-2 text-white text-xs font-semibold" 
-								type="text" name="economy" placeholder="Economy">
-							</div>							
-						</div>
-					</div>
-					<div class="flex py-4 items-center">
-						<div class="w-1/2 flex items-center">
-							<input type="checkbox" name="add">
-							<span class="text-grey text-xs font-semibold ml-1">Add a hotel</span>
-						</div>
-						<div class="w-1/2 text-right">
-							<button class="text-center px-6 py-3 rounded-xl bg-red-soft text-white text-xs font-semibold whitespace-no-wrap">Search flights</button>
-						</div>
-					</div>
-				</form>
+				</div>
 			</div>
-			<div class="booking my-12">
-				<h3 class="title text-3xl text-blue-night">
-					Check-in/My Booking
-				</h3>
-				<form class="flex-row items-center my-4">
-					<div class="flex">
-						<input class="pl-4 py-4 mx-3 bg-grey-light text-xs text-semibold text-grey-dark rounded-xl" type="text" name="lastname" placeholder="Last name">					
-						<input class="pl-4 py-4 mx-3 bg-grey-light text-xs text-semibold text-grey-dark rounded-xl" type="text" name="booking-code" placeholder="Booking code">
+			<div class="w-full md:w-3/4">
+				<div class="header flex lg:hidden justify-end py-8">
+					<ul class="menu flex flex-row-reverse items-center text-xs font-semibold">
+						<li class="mx-1"><a class="px-3 text-blue-night" href="#"><i class="fas fa-bars fa-2x"></i></a></li>
+						<li class="mx-1 sm:mx-3"><a class="px-1 text-blue-night whitespace-no-wrap" href="#">Menu</a></li>
+						<li class="mx-1 sm:mx-3"><a class="px-1 text-grey-dark whitespace-no-wrap" href="#">Flight status</a></li>
+						<li class="mx-1 sm:mx-3"><a class="px-1 text-grey-dark whitespace-no-wrap" href="#">Check-in</a></li>
+					</ul>
+				</div>
+				<div class="search-flights rounded-b-xl bg-blue-night text-white pb-1 shadow-lg pr-1 mr-1">
+					<ul class="menu flex mb-12">
+						<li class="w-1/3 flex items-center text-center bg-gery-lightest hover:opacity-50">
+							<a href="#" class="w-full text-white py-12 text-xs font-bold">
+								<i class="fas fa-plane hidden sm:inline-block fa-lg sm:mx-1 md:mx-3"></i> Flight
+							</a>
+						</li>
+						<li class="w-1/3 flex items-center text-center bg-gery-lightest hover:opacity-50">
+							<a href="#" class="w-full text-grey py-12 text-xs font-bold hover:text-white">
+								<i class="fas fa-home hidden sm:inline-block fa-lg sm:mx-1 md:mx-3"></i> Hotel
+							</a>
+						</li>
+						<li class="w-1/3 flex items-center text-center bg-gery-lightest hover:opacity-50">
+							<a href="#" class="w-full text-grey py-12 text-xs font-bold hover:text-white">
+								<i class="fas fa-car hidden sm:inline-block fa-lg sm:mx-1 md:mx-3"></i> Rental car
+							</a>
+						</li>
+					</ul>
+					<div class="sub-menu flex justify-center text-center">
+						<button class="active rounded-xl text-white font-semibold text-xs bg-blue-day px-3 py-2 sm:mx-3">Roundtrip</button>
+						<button class="rounded-xl text-grey font-semibold text-xs px-3 py-2 hover:text-white whitespace-no-wrap sm:mx-3">One way</button>
+						<button class="rounded-xl text-grey font-semibold text-xs px-3 py-2 hover:text-white whitespace-no-wrap sm:mx-3">Multi-city</button>
 					</div>
-					<button class="mt-4 text-blue-night bg-none">
-						<span class="text-semibold mr-2">Go</span>
-						<i class="fas fa-arrow-right"></i>
-					</button>				
-				</form>
+					<form class="w-3/4 mx-auto flex-row text-white my-8">
+						<div class="flex items-center border-b border-grey-darker pb-1 my-6">
+							<i class="fas fa-map-marker-alt text-grey"></i>
+							<input class="bg-blue-night border-none pl-3 py-2 text-white text-xs font-semibold" 
+							type="text" name="from" placeholder="From">
+						</div>
+						<div class="flex items-center border-b border-grey-darker pb-1 my-6">
+							<i class="fas fa-map-marker-alt text-grey"></i>
+							<input class="bg-blue-night border-none pl-3 py-2 text-white text-xs font-semibold" 
+							type="text" name="to" placeholder="To">
+						</div>
+						<ul class="tags flex">
+							<li class="tag"><a href="#"class="mx-1 px-4 md:px-6 py-3 rounded-xl text-white text-xs font-semibold bg-white-transparent">Munich</a></li>
+							<li class="tag"><a href="#"class="mx-1 px-4 md:px-6 py-3 rounded-xl text-white text-xs font-semibold bg-white-transparent">Amsterdam</a></li>
+						</ul>
+						<div class="w-full my-4 flex items-center">
+							<div class="w-1/2 mr-4">
+								<div class="flex items-center border-b border-grey-darker pb-1 my-6">
+									<i class="far fa-calendar-alt text-grey"></i>
+									<input class="w-4/5 bg-blue-night border-none pl-3 py-2 text-white text-xs font-semibold" 
+									type="text" name="departing" placeholder="Departing">
+								</div>
+								<div class="flex items-center border-b border-grey-darker pb-1 my-6">
+									<i class="fas fa-users text-grey"></i>
+									<input class="w-4/5 bg-blue-night border-none pl-3 py-2 text-white text-xs font-semibold" 
+									type="text" name="adults" placeholder="Adults">
+								</div>
+							</div>
+							<div class="w-1/2">
+								<div class="flex items-center border-b border-grey-darker pb-1 my-6">
+									<i class="far fa-calendar-alt text-grey"></i>
+									<input class="w-4/5 bg-blue-night border-none pl-3 py-2 text-white text-xs font-semibold" 
+									type="text" name="returning" placeholder="Returnings">
+								</div>
+								<div class="flex items-center border-b border-grey-darker pb-1 my-6">
+									<i class="fas fa-plus text-grey"></i>
+									<input class="w-4/5 bg-blue-night border-none pl-3 py-2 text-white text-xs font-semibold" 
+									type="text" name="economy" placeholder="Economy">
+								</div>							
+							</div>
+						</div>
+						<div class="flex py-4 items-center">
+							<div class="w-1/2 flex items-center">
+								<input type="checkbox" name="add">
+								<span class="text-grey text-xs font-semibold ml-1">Add a hotel</span>
+							</div>
+							<div class="w-1/2 text-right">
+								<button class="text-center px-3 sm:px-6 py-3 rounded-xl bg-red-soft text-white text-xs font-semibold whitespace-no-wrap">Search flights</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="booking w-full my-12">
+					<h3 class="title text-xl sm:text-2xl md:text-3xl text-blue-night">
+						Check-in/My Booking
+					</h3>
+					<form class="flex-row items-center my-4">
+						<div class="flex-row sm:flex">
+							<input class="py-3 px-4 my-2 bg-grey-lighter text-xs text-semibold text-grey-darker rounded-xl sm:mx-3" type="text" name="lastname" placeholder="Last name">					
+							<input class="py-3 px-4 my-2 bg-grey-lighter text-xs text-semibold text-grey-darker rounded-xl sm:mx-3" type="text" name="booking-code" placeholder="Booking code">
+						</div>
+						<button class="mt-4 text-blue-night bg-none">
+							<span class="text-semibold mr-2">Go</span>
+							<i class="fas fa-arrow-right"></i>
+						</button>				
+					</form>
+				</div>
 			</div>
 		</div>
 		<div class="w-full">
-			<div class="header flex justify-end py-8">
+			<div class="hidden header lg:flex justify-end py-8">
 				<ul class="menu flex flex-row-reverse items-center text-xs font-semibold">
 					<li class="mx-3"><a class="px-3 text-blue-night" href="#"><i class="fas fa-bars fa-2x"></i></a></li>
 					<li class="mx-3"><a class="px-3 text-blue-night" href="#">Menu</a></li>
@@ -126,85 +140,85 @@
 					<li class="mx-3"><a class="px-3 text-grey-dark" href="#">Check-in</a></li>
 				</ul>
 			</div>
-			<div class="content px-8 my-8">
+			<div class="content my-8 sm:mx-2 md:mx-3">
 				<div class="offers mx-auto">
-					<h1 class="title text-2xl text-blue-night"> Best Value Offers to Europe!</h1>
-					<ul class="flextext-base text-blue-night my-12 px-3">
+					<h1 class="title text-center text-lg sm:text-xl md:text-2xl text-blue-night"> Best Value Offers to Europe!</h1>
+					<ul class="text-base text-blue-night my-12 px-6">
 						<li class="flex justify-between border-b border-grey-light pb-6 my-8">
-							<p class="w-1/4 mx-3">Munich</p>
-							<p class="w-1/4 mx-3"><span class="text-grey-dark text-xs font-semibold">From</span> 860 GEL</p>
-							<p class="w-1/4 mx-3">15 Aug - 22 Aug</p>
-							<p class="w-1/4 mx-3">
-								<a class="hover:text-white hover:shadow-lg px-4 py-3 text-center text-xs text-grey-dark rounded-xl font-semibold" href="#">
-									Book Now <i class="fas fa-arrow-right"></i>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base">Munich</p>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base"><span class="text-grey-dark text-xs font-semibold">From</span> 860 GEL</p>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base">15 Aug - 22 Aug</p>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base">
+								<a class="hover:text-white hover:shadow-lg px-4 py-3 text-center text-xs whitespace-no-wrap text-grey-dark rounded-xl font-semibold" href="#">
+									Book Now <i class="fas fa-arrow-right md:ml-1"></i>
 								</a>
 							</p>
 						</li>
 						<li class="flex justify-between border-b border-grey-light pb-6 my-8">
-							<p class="w-1/4 mx-3">Paris</p>
-							<p class="w-1/4 mx-3"><span class="text-grey-dark text-xs font-semibold">From</span> 920 GEL</p>
-							<p class="w-1/4 mx-3">20 Aug - 25 Aug</p>
-							<p class="w-1/4 mx-3">
-								<a class="hover:text-white hover:shadow-lg px-4 py-3 text-center text-xs text-grey-dark rounded-xl font-semibold" href="#">
-									Book Now <i class="fas fa-arrow-right"></i>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base">Paris</p>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base"><span class="text-grey-dark text-xs font-semibold">From</span> 920 GEL</p>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base">20 Aug - 25 Aug</p>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base">
+								<a class="hover:text-white hover:shadow-lg px-4 py-3 text-center whitespace-no-wrap text-xs text-grey-dark rounded-xl font-semibold" href="#">
+									Book Now <i class="fas fa-arrow-right md:ml-1"></i>
 								</a>
 							</p>
 						</li>
 						<li class="flex justify-between border-b border-grey-light pb-6 my-8">
-							<p class="w-1/4 mx-3">Rome</p>
-							<p class="w-1/4 mx-3"><span class="text-grey-dark text-xs font-semibold">From</span> 860 GEL</p>
-							<p class="w-1/4 mx-3">27 Aug - 30 Aug</p>
-							<p class="w-1/4 mx-3">
-								<a class="hover:text-white hover:shadow-lg px-4 py-3 text-center text-xs text-white bg-blue-day rounded-xl font-semibold shadow-lg" href="#">
-									Book Now <i class="fas fa-arrow-right"></i>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base">Rome</p>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base"><span class="text-grey-dark text-xs font-semibold">From</span> 860 GEL</p>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base">27 Aug - 30 Aug</p>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base">
+								<a class="hover:text-white hover:shadow-lg px-4 py-3 text-center whitespace-no-wrap text-xs text-grey-dark rounded-xl font-semibold" href="#">
+									Book Now <i class="fas fa-arrow-right md:ml-1"></i>
 								</a>
 							</p>
 						</li>
 						<li class="flex justify-between border-b border-grey-light pb-6 my-8">
-							<p class="w-1/4 mx-3">Amsterdam</p>
-							<p class="w-1/4 mx-3"><span class="text-grey-dark text-xs font-semibold">From</span> 900 GEL</p>
-							<p class="w-1/4 mx-3">15 Aug - 22 Aug</p>
-							<p class="w-1/4 mx-3">
-								<a class="hover:text-white hover:shadow-lg px-4 py-3 text-center text-xs text-grey-dark rounded-xl font-semibold" href="#">
-									Book Now <i class="fas fa-arrow-right"></i>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base">Amsterdam</p>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base"><span class="text-grey-dark text-xs font-semibold">From</span> 900 GEL</p>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base">15 Aug - 22 Aug</p>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base">
+								<a class="hover:text-white hover:shadow-lg px-4 py-3 text-center whitespace-no-wrap text-xs text-grey-dark rounded-xl font-semibold" href="#">
+									Book Now <i class="fas fa-arrow-right md:ml-1"></i>
 								</a>
 							</p>
 						</li>
 						<li class="flex justify-between border-b border-grey-light pb-6 my-8">
-							<p class="w-1/4 mx-3">Alger</p>
-							<p class="w-1/4 mx-3"><span class="text-grey-dark text-xs font-semibold">From</span> 1200 GEL</p>
-							<p class="w-1/4 mx-3">10 Aug -  19Aug</p>
-							<p class="w-1/4 mx-3">
-								<a class="hover:text-white hover:shadow-lg px-4 py-3 text-center text-xs text-grey-dark rounded-xl font-semibold" href="#">
-									Book Now <i class="fas fa-arrow-right"></i>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base">Alger</p>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base"><span class="text-grey-dark text-xs font-semibold">From</span> 1200 GEL</p>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base">10 Aug -  19Aug</p>
+							<p class="w-1/4 sm:mx-1 text-xs sm:text-sm md:text-base">
+								<a class="hover:text-white hover:shadow-lg px-4 py-3 text-center whitespace-no-wrap text-xs text-grey-dark rounded-xl font-semibold" href="#">
+									Book Now <i class="fas fa-arrow-right md:ml-1"></i>
 								</a>
 							</p>
 						</li>
 					</ul>
 					<div class="flex justify-between">
-						<div>
-							<p class="text-grey-dark text-sm">*Round-trip including all taxes, fees and carrier charges.</p>
+						<div class="w-3/4">
+							<p class="leading-normal text-grey-dark text-sm ml-2">*Round-trip including all taxes, fees and carrier charges.</p>
 						</div>
-						<div>
+						<div class="w-1/4 text-center md:w-auto">
 							<a class="text-blue-night text-sm font-semibold mx-3" href="#">See all</a>
 						</div>
 					</div>
 				</div>
 				<div class="places my-12">
-					<ul class="flex justify-between">
-						<li>
+					<ul class="flex-row sm:flex justify-between mx-1">
+						<li class="w-full xs:w-1/2 my-6 mx-auto md:w-auto md:mx-0">
 							<a class="flex items-center" href="#">
 								<img class="w-24 h-24 rounded-xl shadow-lg" src="src/images/prague.jpg"> 
 								<p class="ml-3 text-blue-night text-sm">Prague</p>
 							</a>
 						</li>
-						<li>
+						<li class="w-full xs:w-1/2 my-6 mx-auto md:w-auto md:mx-0">
 							<a class="flex items-center" href="#">
 								<img class="w-24 h-24 rounded-xl shadow-lg" src="src/images/stockholm.jpeg"> 
 								<p class="ml-3 text-blue-night text-sm">Stockholm</p>
 							</a>
 						</li>
-						<li>
+						<li class="w-full xs:w-1/2 my-6 mx-auto md:w-auto md:mx-0">
 							<a class="flex items-center" href="#">
 								<img class="w-24 h-24 rounded-xl shadow-lg" src="src/images/bali.jpeg"> 
 								<p class="ml-3 text-blue-night text-sm">Bali</p>
